@@ -1,8 +1,10 @@
 /* Register.js */
+import { Link } from 'react-router-dom';
+
 /* useStateをimport↓ */
 import React, { useState, useEffect } from "react";
 /* ↓「createUserWithEmailAndPassword」と「auth」をimport */
-import { 
+import {
   createUserWithEmailAndPassword,
   onAuthStateChanged
 } from "firebase/auth";
@@ -78,6 +80,14 @@ const Register = () => {
                     />
                   </div>
                   <button>登録する</button>
+
+                  
+                      <div className="text-center">
+                        <Link to="/login/"><button type="button" className="btn btn-outline-dark">登録済みの方はこちら</button></Link>
+                      </div>
+                      <div className="container"></div>
+                      
+
                 </form>
               </div>
               <div className="col"></div>

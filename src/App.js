@@ -1,4 +1,5 @@
 import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+import Header from './Header';
 import Home from './routes/home';
 import Contact from './routes/contact';
 import NoMatch from './routes/nomatch';
@@ -11,54 +12,20 @@ import Mypage from "./routes/Mypage";
 import Newbook from "./routes/newbook";
 
 
-
 function App() {
   const [text, setValueText] = useState("");
 
 
   return (
     <div className="App">
+
       <BrowserRouter>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/search">Search</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/setting">Setting</Link></li>
-          <li><Link to="/register/">register</Link></li>
-          <li><Link to="/login/">login</Link></li>
-          <li><Link to="/mypage/">mypage</Link></li>
-          <li><Link to="/newbook/">newbook</Link></li>
-          <h1>{text}</h1>
-        </ul>
-
-        <div class="navbar navbar-expand-xl bg-light">
-          <div class="container-fluid">
-            <Link className="top-title" to="/"><h4 >蔵書検索アプリ LIB</h4></Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-              aria-controls="offcanvas">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Menu</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                  <li class="nav-item"><a href="#" class="nav-link">hoge</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">hoge</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">hoge</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div>
+          <Header />
         </div>
-
-
-
+        
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/header/" element={<Header />} />
           <Route path="/search/" element={
             //ここでデータの受け渡し！
             <Search exText="sended by app.js" />
@@ -70,9 +37,10 @@ function App() {
           <Route path={`/login/`} element={<Login />} />
           <Route path={`/mypage/`} element={<Mypage />} />
           <Route path={`/newbook/`} element={<Newbook />} />
+          <Route path="/" element={<Home />} />
+
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }

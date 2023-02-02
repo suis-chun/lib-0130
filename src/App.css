@@ -1,5 +1,5 @@
 .App{
-    background-color: rgb(255, 229, 170);
+    background-color: rgb(223, 217, 217);
 }
 
 .top-title{
@@ -17,20 +17,13 @@
    padding-top: 4px;
 }
 
-.topSpace{
-
-}
-
-.header {
-    padding-bottom: 10px;
-}
    
 div.row{
     background-color: rgb(250, 214, 165);
     padding: 0 5px;
 }
 
-
-
-
+.d-flex{
+    margin: 10px;
+}
 

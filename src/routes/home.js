@@ -24,12 +24,19 @@ function Home(props) {
   //現在時刻表示機能
   return (
     <div>
+      
+      <Link to="/newbook/">
+          <form className="d-flex form2">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button className="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </Link>
       <div>
         今日は  {year}年 {month}月{date}日 {hour}:{minute}:{second}  です。
       </div>
-      <h2>This is Home</h2>
+      <h2>This is the Home</h2>
       <div className="topSpace">
-        <div class="container-fluid">
+        <div className="container-fluid">
           <div className="row">
             <div className='col-md'></div>
             <div className="col-md-6">
@@ -58,23 +65,9 @@ function Home(props) {
             <div className='col-md'></div>
           </div>
 
-          <div className="row">
-            <div className='col-md-6'>1-1</div>
-            <div className='col-3'>1-2</div>
-            <div className='col-3'>1-3</div>
-
-          </div>
-          <div class="row">
-            <div className='col'>2行目 １列目</div>
-          </div>
-          <div class="row">
-            <div className='col'>3行目 １列目</div>
-          </div>
-
-
         </div>
       </div>
-      <Newbook />
+      
     </div>
   );
 }

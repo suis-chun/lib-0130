@@ -30,18 +30,21 @@ const Mypage = () => {
 
     return (
         <>
-            {/* ↓ログインしていない場合はログインページにリダイレクトする設定 */}
+            {/* ↓ログインしていない場合は登録ページにリダイレクトする設定 */}
             {!user ? (
-                <Navigate to={`/login/`} />
+                <Navigate to={`/register/`} />
             ) : (
-                <>
+                <div className="container">
+                    
                     <h1>マイページ</h1>
                     {/* ↓ユーザーのメールアドレスを表示（ログインしている場合） */}
                     <p>{user?.email}</p>
+                    
+
                     {/* ↓「onClick」を追加 */}
                     <button onClick={logout}>ログアウト</button>
-                </>
-                )}
+                </div>
+            )}
         </>
     );
 };

@@ -1,4 +1,6 @@
 /* Login.js */
+import { Link } from 'react-router-dom';
+
 
 /* ↓新たに5つimportしています */
 import React, { useState, useEffect } from "react";
@@ -46,7 +48,7 @@ const Login = () => {
                 <>
                     <div className="container">
                         <div className="row">
-                        <div className="col"></div>
+                            <div className="col"></div>
                             <div className="col-8">
                                 <h1>ログインページ</h1>
                                 {/* onSubmitを追加↓ */}
@@ -72,6 +74,12 @@ const Login = () => {
                                         />
                                     </div>
                                     <button>ログイン</button>
+                                    <div className="text-center">
+                                        <Link to="/register/"><button type="button" className="btn btn-outline-dark  ">新規作成</button></Link>
+                                    </div>
+                                    <div class="container"></div>
+
+
                                 </form>
                             </div>
                             <div className="col"></div>

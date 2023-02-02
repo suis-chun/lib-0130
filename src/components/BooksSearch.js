@@ -3,16 +3,17 @@ import BooksResult from "../components/BooksResult";
 import { Input } from '@chakra-ui/react';
 import { Heading } from '@chakra-ui/react';
 
-const BooksSearch = () => {
+const BooksSearch = (props) => {
 
   const { handleNewBooks, searchBooks, value, items } = useSearch();
-
+ 
   return (
     <div>
-      <Heading as='h1' size='xl' mb='5'>下で検索</Heading>
-      <form onSubmit={searchBooks} className="text-xl">
-        <Input onChange={handleNewBooks} value={value} />
+      <form onSubmit={searchBooks} class="d-flex">
+        <input onChange={handleNewBooks} value={value} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button onclick={handleNewBooks} value={value} class="btn btn-outline-success" type="submit">Search</button>
       </form>
+
       <BooksResult items={items} />
     </div>
   );

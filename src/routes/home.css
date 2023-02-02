@@ -1,3 +1,11 @@
 .offcanvas {
     background-color: #FFFFFF;
   }
+
+  .carousel-inner .carousel-item img{
+    z-index: 1;
+  }
+
+  .carousel-control-next span{
+    z-index: 10;
+  }
