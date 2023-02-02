@@ -11,6 +11,7 @@ import Mypage from "./routes/Mypage";
 import Newbook from "./routes/newbook";
 
 
+
 function App() {
   const [text, setValueText] = useState("");
 
@@ -28,14 +29,7 @@ function App() {
           <li><Link to="/mypage/">mypage</Link></li>
           <li><Link to="/newbook/">newbook</Link></li>
           <h1>{text}</h1>
-
         </ul>
-
-      
-
-
-
-
 
         <div class="navbar navbar-expand-xl bg-light">
           <div class="container-fluid">
