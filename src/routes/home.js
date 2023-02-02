@@ -1,26 +1,35 @@
-
 import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
-import '../App.css';
+import './home.css';
+import Newbook from "./newbook";
+import React, { useState, useEffect } from "react";
 
 function Home(props) {
 
-  
+  //現在時刻表示機能
+  const [time, setTime] = useState(new Date());
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const year = time.getFullYear();
+  const month = time.getMonth() + 1;
+  const date = time.getDate();
+  const hour = time.getHours();
+  const minute = time.getMinutes();
+  const second = time.getSeconds();
+  //現在時刻表示機能
   return (
-
-    
-    
     <div>
-      <p>{props.count}</p>
-      <h2>Home</h2>
-
-      
-
+      <div>
+        今日は  {year}年 {month}月{date}日 {hour}:{minute}:{second}  です。
+      </div>
+      <h2>This is Home</h2>
       <div className="topSpace">
-
-
         <div class="container-fluid">
-
           <div className="row">
             <div className='col-md'></div>
             <div className="col-md-6">
@@ -49,9 +58,6 @@ function Home(props) {
             <div className='col-md'></div>
           </div>
 
-
-
-
           <div className="row">
             <div className='col-md-6'>1-1</div>
             <div className='col-3'>1-2</div>
@@ -64,12 +70,13 @@ function Home(props) {
           <div class="row">
             <div className='col'>3行目 １列目</div>
           </div>
-        </div>
 
+
+        </div>
       </div>
+      <Newbook />
     </div>
-    
-    );
+  );
 }
 
 export default Home;

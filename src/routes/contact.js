@@ -1,5 +1,10 @@
 function Contact(props) {
-    return <h2>{props.message}</h2>;
+    return (
+      <div>
+        <h1>Contact</h1>
+        
+      </div>
+    );
   }
   
   export default Contact;
