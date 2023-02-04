@@ -16,7 +16,12 @@ const BooksResult = memo((props) => {
               <img src={item.image} />
               <div className='p16'>
                 <Heading as='h2' size='xl' mt='10'>{item.title}</Heading>
-                <Text align='justify' fontSize='xl' mt='10'>{item.description}</Text>
+                <p>{item.authors}</p>
+                {/*
+                <p>{item.description}</p>
+                ISBN_10: {item.ISBN_10}
+                ISBN_13: {item.ISBN_13}
+                */}
               </div>
             </a>
           </div>)

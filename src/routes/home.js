@@ -2,6 +2,7 @@ import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 import './home.css';
 import Newbook from "./newbook";
 import React, { useState, useEffect } from "react";
+import { BookList } from './BookList';
 
 function Home(props) {
 
@@ -64,9 +65,10 @@ function Home(props) {
             </div>
             <div className='col-md'></div>
           </div>
-
         </div>
       </div>
+
+      <BookList />
       
     </div>
   );

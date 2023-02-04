@@ -10,6 +10,8 @@ import Register from "./routes/Register";
 import Login from "./routes/Login";
 import Mypage from "./routes/Mypage";
 import Newbook from "./routes/newbook";
+import { BookList, Detail } from './routes/BookList';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Header />
+          
         </div>
         
         <Routes>
@@ -38,6 +41,9 @@ function App() {
           <Route path={`/mypage/`} element={<Mypage />} />
           <Route path={`/newbook/`} element={<Newbook />} />
           <Route path="/" element={<Home />} />
+          <Route path="/newbook2/" element={<BookList />} />
+          <Route path="/detail/:id" element={<Detail />} />
+
 
         </Routes>
       </BrowserRouter>

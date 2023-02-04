@@ -1,9 +1,18 @@
 .link-text{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
    
 }
 
 .nav-top-2{
     margin-top: 10px;;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.link:hover{
+    color: rgb(255, 255, 255);
 }
