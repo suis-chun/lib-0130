@@ -16,7 +16,7 @@ export function BookList(props) {
         (item) => {
             return (
                 <div>
-                    <h1>新着</h1>
+                    
                     <Link to={'/detail-number/' + item.id}>
                         <img className="book-img" src={'/book/' + item.img} />
                         <p>{item.title}</p>
@@ -27,6 +27,7 @@ export function BookList(props) {
     )
     return (
         <div>
+            <h1>新着</h1>
             <div>{list}</div>
         </div>
     )
