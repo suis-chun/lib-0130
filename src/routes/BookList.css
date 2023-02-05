@@ -1,3 +1,27 @@
 .book-img{
     height: 200px;
 }
+.flex{
+    margin: 20px 20px;
+    background-color:lightgrey;
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.buleline{
+    text-decoration-line: none;
+    color: black;
+}
+.flex3{
+    display: flex;
+    margin-bottom: 10px;
+    height:200px;
+}
+.flex4{
+    flex-wrap: wrap;
+    margin-right:20px;
+}
+.img0{
+    width:auto; height:auto;
+    margin-left:20px;
+}

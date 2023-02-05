@@ -1,4 +1,54 @@
 .book-title{
     font-size: 20px;
 }
-
+.flex2{
+    background-color:lightgrey;
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.ggg{
+    width:140px;
+}
+.Resultsimage{
+    height:200px;
+}
+.ddd0{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.detail0{
+    margin:10px 20px;
+}
+.flex3{
+    display: flex;
+    margin-bottom: 10px;
+    background-color:lightgray;
+}
+.flex4{
+    flex-wrap: wrap;
+}
+.amazon{
+    display: flex;
+    justify-content:space-around;
+}
+button.a{
+    width:195px;
+    background-color:#e47911;
+}
+button.b{
+    width:195px;
+    background-color:#bf0000;
+}
+.img0{
+width:auto; height:auto;
+margin-left:20px;
+}
+.fff{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

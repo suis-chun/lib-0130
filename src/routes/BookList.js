@@ -17,9 +17,11 @@ export function BookList(props) {
             return (
                 <div>
                     
-                    <Link to={'/detail-number/' + item.id}>
-                        <img className="book-img" src={'/book/' + item.img} />
-                        <p>{item.title}</p>
+                    <Link to={'/detail-number/' + item.id} className="buleline">
+                        <div className="flex">
+                            <img className="book-img" src={'/book/' + item.img} />
+                            <p>{item.title}</p>
+                        </div>
                     </Link>
                 </div>
             )
@@ -46,11 +48,13 @@ export function Detail(props) {
         <div>
             <h1>詳細ページ</h1>
             <div>
-                <img class="img" src={'/book/' + book.img} width="80px" />
-            </div>
-            <div>
-                <p className="title">タイトル: {book.title}</p>
-                <p class="authors">著者: {book.writer}</p>
+                <div className="flex3">
+                <img class="img0" src={'/book/' + book.img} />
+                <div className="flex4">
+                    <p className="title">タイトル: {book.title}</p>
+                    <p class="authors">著者: {book.writer}</p>
+                </div>
+              </div>
             </div>
             <p>識別番号: {book.id}</p>
             <Link to="/">もどる</Link>
