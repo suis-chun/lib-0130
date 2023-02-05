@@ -4,6 +4,8 @@ import { Heading } from '@chakra-ui/react';
 import { Link, useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useLocation } from "react-router-dom";
+import Libbooks from "./Libbooks";
+import Geo2 from "./Geo2";
 
 
 
@@ -58,12 +60,16 @@ export function Detail2(props) {
       <div>
         <p className="title">タイトル: {state.title}</p>
         <p class="authors">著者: {state.authors}</p>
-        <button>amazonで見る</button>
+        <a href={'https://www.amazon.co.jp/s?k=' + state.title} ><button className="">amazonで見る</button></a>
         <button>楽天で見る</button>
         <p>説明: {state.description}</p>
         <p>ISBN10: {state.ISBN10}</p>
         <p>ISBN13: {state.ISBN13}</p>
       </div>
+      <Geo2 />
+
+      <Libbooks ISBN={state.ISBN10} />
+      
 
       <Link to="/">もどる</Link>
     </div>
