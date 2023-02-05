@@ -22,7 +22,13 @@ function Header() {
                                 <Link className="link-text" to="/mypage/">My Page</Link>
                             </li>
                             */}
-                            
+                            <div class="button">
+                                <Link className="link" to="/"><button className="btn btn-outline-light" >Home </button></Link>
+                                <Link className="link" to="/mypage/"><button className="btn btn-outline-light" >My Card </button></Link>
+                                <Link className="link" to="/contact/"><button className="btn btn-outline-light" >Contact</button></Link>
+
+
+                            </div>
                             <ul>
                                 <div>
                                     <Link className="link" to="/">Home </Link>
@@ -39,9 +45,9 @@ function Header() {
                         </ul>
 
                     </div>
-                </div>
-            </nav>
-        </div>
+                </div >
+            </nav >
+        </div >
     );
 }
 

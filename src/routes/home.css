@@ -9,3 +9,8 @@
   .carousel-control-next span{
     z-index: 10;
   }
+
+  .home.container-fluid {
+    width: auto;
+    min-height: 190px;
+  }

@@ -37,7 +37,7 @@ function Home(props) {
       </div>
       <h2>This is the Home</h2>
       <div className="topSpace">
-        <div className="container-fluid">
+        <div className="container-fluid home">
           <div className="row">
             <div className='col-md'></div>
             <div className="col-md-6">

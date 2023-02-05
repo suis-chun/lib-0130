@@ -11,6 +11,7 @@ import Login from "./routes/Login";
 import Mypage from "./routes/Mypage";
 import Newbook from "./routes/newbook";
 import { BookList, Detail } from './routes/BookList';
+import { Detail2 } from './components/BooksResult';
 
 
 
@@ -42,7 +43,8 @@ function App() {
           <Route path={`/newbook/`} element={<Newbook />} />
           <Route path="/" element={<Home />} />
           <Route path="/newbook2/" element={<BookList />} />
-          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/detail-number/:id" element={<Detail />} />
+          <Route path="/book-isbn=/:id" element={<Detail2 />} />
 
 
         </Routes>
