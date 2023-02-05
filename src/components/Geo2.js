@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Library from './Library';
 
-const Geo2 = () => {
+const Geo2 = (props) => {
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
+  console.log('ISBN', props.ISBN);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -18,7 +19,7 @@ const Geo2 = () => {
 
   return (
     <div>
-      {lat && lng ? <Library  lng={lng} lat={lat} /> : <p>位置情報を取得中...</p>}
+      {lat && lng ? <Library  ISBN={props.ISBN} lng={lng} lat={lat} /> : <p>位置情報を取得中...</p>}
     </div>
   );
 };

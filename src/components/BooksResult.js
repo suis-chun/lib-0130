@@ -68,7 +68,7 @@ export function Detail2(props) {
       </div>
       <Geo2 />
 
-      <Libbooks ISBN={state.ISBN10} />
+      <Geo2 ISBN={state.ISBN10} />
       
 
       <Link to="/">もどる</Link>

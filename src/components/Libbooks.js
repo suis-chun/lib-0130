@@ -13,11 +13,15 @@ function Libbooks  (props)  {
   
   //const systemId = props.systemId
   console.log('id2', props.systemId);
-  console.log('ISBN', props.ISBN);
+  console.log('ISBN-Libbooks', props.ISBN);
+
+  
   
   function getData2 ()  {
+
    
-    fetchJsonp('https://api.calil.jp/check?appkey=%7B9ee7b53e4e93f4a89386d1ad2327d8%7D&isbn='+props.ISBN+'&systemid=' + props.systemId + '&format=json')
+   
+    fetchJsonp('https://api.calil.jp/check?appkey=%7B9ee7b53e4e93f4a89386d1ad2327d8%7D&isbn='+ props.ISBN +'&systemid=' + props.systemId + '&format=json')
     .then(function(response) {
       return response.json()
     })
